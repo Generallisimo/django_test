@@ -1,3 +1,4 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import Task
+# создаем таблицу чтобы её было видно
+admin.site.register(Task)

@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %} {% comment %} наследуем все из файла {% endcomment %}
+{% comment %} даем название {% endcomment %}
+{% block title %}
+{% comment %} Вывод title из фун {% endcomment %}
+{{title}}
+{% endblock %}
+{% block content %}
+    <h1>Главная страница</h1>
+    {% if tasks %}
+        {% comment %} создаем цикл для перебора {% endcomment %}
+        {% for el in tasks %}
+            <div class="alert alert-warning mt-2">
+                {% comment %} выводим из перебора наш title {% endcomment %}
+                <h3>{{ el.title}}</h3>
+                <p>{{ el.task}}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>БД пуст</p>
+    {% endif %}
+{% endblock %}

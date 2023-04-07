@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %} {% comment %} наследуем все из файла {% endcomment %}
+{% comment %} даем название {% endcomment %}
+{% block title %}
+{% comment %} Вывод title из фун {% endcomment %}
+Создание таска
+{% endblock %}
+{% block content %}
+    <h1>Создание Таска</h1>
+    <form method="post">
+        {% comment %} укз токен {% endcomment %}
+        {% csrf_token %}
+        {% comment %} вывод форм которые уже стилезованы {% endcomment %}
+        {{form.title}}<br>
+        {{form.task}}<br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{error}}</span>
+    </form>
+{% endblock %}

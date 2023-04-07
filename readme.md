@@ -24,3 +24,13 @@ models - таблицы которые будут добавлясть в бд
 tests - для тестировки
 views - для вывода всех старниц
 urls - туда будем добавлять обрабокту основного url
+temlates/main - здесь все шаблоны где название приложение папки
+forms - здесь обработка форм для страницы 
+
+Создание миграции:
+python3 manage.py makemigrations - для создание модели
+python3 manage.py migrate - мигрируем
+
+Создаем админа:
+python3 manage.py createsuperuser
+
